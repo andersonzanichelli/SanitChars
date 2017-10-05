@@ -16,11 +16,11 @@ include 'services:webservice'
 */
 
 rootProject.name = 'DisplayNumber'
-
-repositories {
-  mavenCentral()
-}
-
-dependencies {
-	compile group: 'com.google.guava', name: 'guava', version: '11.0.2'
-}
+//
+//repositories {
+//  mavenCentral()
+//}
+//
+//dependencies {
+//	compile group: 'com.google.guava', name: 'guava', version: '11.0.2'
+//}

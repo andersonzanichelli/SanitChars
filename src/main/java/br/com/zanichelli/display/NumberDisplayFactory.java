@@ -44,6 +44,10 @@ public class NumberDisplayFactory implements IDisplayFactory {
 			case 3:
 				displays.add(new ThreeDisplay(size));
 				break;
+				
+			case 4:
+				displays.add(new FourDisplay(size));
+				break;
 
 			default:
 				break;
