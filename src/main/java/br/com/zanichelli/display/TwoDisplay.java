@@ -6,18 +6,20 @@ import br.com.zanichelli.display.cells.SpacedCellFactory;
 
 public class TwoDisplay implements IDisplay {
 
-	private int size;
+	private int width;
+	private int height;
 
-	public TwoDisplay(int size) {
-		this.size = size;
+	public TwoDisplay(int size, int height) {
+		this.width = size;
+		this.height = height;
 	}
 
 	@Override
 	public String levelOne() {
 		StringBuilder sb = new StringBuilder()
-				.append(new SpacedCellFactory().createCell().display())
-				.append(new DashedCellFactory().createCell().display())
-				.append(new SpacedCellFactory().createCell().display());
+				.append(new SpacedCellFactory(width).createCell().display())
+				.append(new DashedCellFactory(width).createCell().display())
+				.append(new SpacedCellFactory(width).createCell().display());
 
 		return sb.toString();
 	}
@@ -25,8 +27,8 @@ public class TwoDisplay implements IDisplay {
 	@Override
 	public String leveltwo() {
 		StringBuilder sb = new StringBuilder()
-				.append(new SpacedCellFactory().createCell().display())
-				.append(new SpacedCellFactory().createCell().display())
+				.append(new SpacedCellFactory(width).createCell().display())
+				.append(new SpacedCellFactory(width).createCell().display())
 				.append(new PipedCellFactory().createCell().display());
 
 		return sb.toString();
@@ -35,9 +37,9 @@ public class TwoDisplay implements IDisplay {
 	@Override
 	public String levelthree() {
 		StringBuilder sb = new StringBuilder()
-				.append(new SpacedCellFactory().createCell().display())
-				.append(new DashedCellFactory().createCell().display())
-				.append(new SpacedCellFactory().createCell().display());
+				.append(new SpacedCellFactory(width).createCell().display())
+				.append(new DashedCellFactory(width).createCell().display())
+				.append(new SpacedCellFactory(width).createCell().display());
 
 		return sb.toString();
 	}
@@ -46,8 +48,8 @@ public class TwoDisplay implements IDisplay {
 	public String levelfour() {
 		StringBuilder sb = new StringBuilder()
 				.append(new PipedCellFactory().createCell().display())
-				.append(new SpacedCellFactory().createCell().display())
-				.append(new SpacedCellFactory().createCell().display());
+				.append(new SpacedCellFactory(width).createCell().display())
+				.append(new SpacedCellFactory(width).createCell().display());
 
 		return sb.toString();
 	}
@@ -55,9 +57,9 @@ public class TwoDisplay implements IDisplay {
 	@Override
 	public String levelfive() {
 		StringBuilder sb = new StringBuilder()
-				.append(new SpacedCellFactory().createCell().display())
-				.append(new DashedCellFactory().createCell().display())
-				.append(new SpacedCellFactory().createCell().display());
+				.append(new SpacedCellFactory(width).createCell().display())
+				.append(new DashedCellFactory(width).createCell().display())
+				.append(new SpacedCellFactory(width).createCell().display());
 
 		return sb.toString();
 	}

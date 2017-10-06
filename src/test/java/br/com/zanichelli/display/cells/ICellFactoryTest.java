@@ -7,10 +7,26 @@ public class ICellFactoryTest {
 
 	@Test
 	public void createDashCell() {
-		ICellFactory cellFactory = new DashedCellFactory();
+		ICellFactory cellFactory = new DashedCellFactory(1);
 		ICell cell = cellFactory.createCell();
 		
 		Assert.assertEquals("-", cell.display());
+	}
+	
+	@Test
+	public void createDashCellWidth2() {
+		ICellFactory cellFactory = new DashedCellFactory(2);
+		ICell cell = cellFactory.createCell();
+		
+		Assert.assertEquals("--", cell.display());
+	}
+	
+	@Test
+	public void createDashCellWidth4() {
+		ICellFactory cellFactory = new DashedCellFactory(4);
+		ICell cell = cellFactory.createCell();
+		
+		Assert.assertEquals("----", cell.display());
 	}
 
 	@Test
@@ -23,7 +39,7 @@ public class ICellFactoryTest {
 	
 	@Test
 	public void createSpaceCell() {
-		ICellFactory spaceFactory = new SpacedCellFactory();
+		ICellFactory spaceFactory = new SpacedCellFactory(1);
 		ICell cell = spaceFactory.createCell();
 		
 		Assert.assertEquals(" ", cell.display());

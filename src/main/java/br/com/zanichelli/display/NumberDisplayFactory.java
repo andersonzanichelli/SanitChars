@@ -9,10 +9,12 @@ import com.google.common.collect.Lists;
 public class NumberDisplayFactory implements IDisplayFactory {
 
 	private List<Integer> numbers;
-	private int size;
+	private int width;
+	private int height;
 
-	public NumberDisplayFactory(int size, Integer... numbers) {
-		this.size = size;
+	public NumberDisplayFactory(int width, int height, Integer... numbers) {
+		this.width = width;
+		this.height = height;
 		this.numbers = asList(numbers);
 	}
 
@@ -30,23 +32,27 @@ public class NumberDisplayFactory implements IDisplayFactory {
 			switch (number) {
 			
 			case 0:
-				displays.add(new ZeroDisplay(size));
+				displays.add(new ZeroDisplay(width, height));
 				break;
 			
 			case 1:
-				displays.add(new OneDisplay(size));
+				displays.add(new OneDisplay(width, height));
 				break;
 				
 			case 2:
-				displays.add(new TwoDisplay(size));
+				displays.add(new TwoDisplay(width, height));
 				break;
 				
 			case 3:
-				displays.add(new ThreeDisplay(size));
+				displays.add(new ThreeDisplay(width, height));
 				break;
 				
 			case 4:
-				displays.add(new FourDisplay(size));
+				displays.add(new FourDisplay(width, height));
+				break;
+				
+			case 5:
+				displays.add(new FiveDisplay(width, height));
 				break;
 
 			default:
